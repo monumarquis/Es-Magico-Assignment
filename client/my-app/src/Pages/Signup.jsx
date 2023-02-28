@@ -33,8 +33,9 @@ const Signup = () => {
     };
     const handelForm = async (e) => {
         e.preventDefault();
+        setLoading(true)
         try {
-            let {data} = await axios.post("http://localhost:8001/user/register", {...formData,role:"user"})
+            let {data} = await axios.post("https://aquamarine-piranha-gear.cyclic.app/user/register", {...formData,role:"user"})
             toast({
                 title: data.message,
                 description: "We've created your account for you.",
@@ -113,7 +114,7 @@ const Signup = () => {
                                 </Button>
                             </InputRightElement>
                         </InputGroup>
-                        <Button colorScheme="red" py="5" mt="10" type="submit" isLoading={loading} loadingText='Account is Creating'>
+                        <Button colorScheme="red" py="5" mt="10" type="submit" isLoading={loading} >
                             Register
                         </Button>
                     </FormControl>

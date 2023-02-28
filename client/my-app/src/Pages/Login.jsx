@@ -23,7 +23,7 @@ const Login = () => {
     const handleClick = () => setShow(!show);
     const toast = useToast()
     const dispatch = useDispatch()
-    const { isAuth,isLoading, } = useSelector((state) => state.auth)
+    const { isAuth,loading } = useSelector((state) => state.auth)
 
     const handleChange = (e) => {
         setFormData((prevFormData) => ({
@@ -92,7 +92,7 @@ const Login = () => {
                                 </Button>
                             </InputRightElement>
                         </InputGroup>
-                        <Button colorScheme="red" py="5" mt="10" type="submit" isLoading={isLoading} loadingText='Logging in'>
+                        <Button colorScheme="red" py="5" mt="10" type="submit" isLoading={loading} loadingText='Logging in'>
                             Register
                         </Button>
                     </FormControl>

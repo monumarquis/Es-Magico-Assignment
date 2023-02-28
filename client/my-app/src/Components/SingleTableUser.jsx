@@ -20,7 +20,7 @@ const SingleTableUser = ({ name, id, role, password, email }) => {
             }
         }
         try {
-            const { data } = await axios.delete(`http://localhost:8001/user/${id}`, config);
+            const { data } = await axios.delete(`https://aquamarine-piranha-gear.cyclic.app/user/${id}`, config);
             console.log(data)
             toast({
                 title: data.message,
@@ -49,7 +49,7 @@ const SingleTableUser = ({ name, id, role, password, email }) => {
             }
         }
         try {
-            const { data } = await axios.patch(`http://localhost:8001/user`, { userId: id, role: Role }, config);
+            const { data } = await axios.patch(`https://aquamarine-piranha-gear.cyclic.app/user`, { userId: id, role: Role }, config);
             console.log(data)
             toast({
                 title: data.message,

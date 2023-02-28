@@ -1,5 +1,6 @@
 import axios from "axios";
 import { ALL_USER_PROFILE_ERROR, ALL_USER_PROFILE_REQUEST, ALL_USER_PROFILE_SUCCESS } from "./allUsers.types";
+
 export const getAllUserProfile = () => async (dispatch) => {
     dispatch({
         type: ALL_USER_PROFILE_REQUEST
@@ -10,7 +11,7 @@ export const getAllUserProfile = () => async (dispatch) => {
         }
     }
     try {
-        const { data } = await axios.get(`http://localhost:8001/user`,config);
+        const { data } = await axios.get(`https://aquamarine-piranha-gear.cyclic.app/user`,config);
         // console.log(data);
           return dispatch({
             type: ALL_USER_PROFILE_SUCCESS,
@@ -34,7 +35,7 @@ export const getAllUserProfileBySearch = (user) => async (dispatch) => {
         }
     }
     try {
-        const { data } = await axios.get(`http://localhost:8001/user/Search/${user}`,config);
+        const { data } = await axios.get(`https://aquamarine-piranha-gear.cyclic.app/Search/${user}`,config);
         // console.log(data);
           return dispatch({
             type: ALL_USER_PROFILE_SUCCESS,

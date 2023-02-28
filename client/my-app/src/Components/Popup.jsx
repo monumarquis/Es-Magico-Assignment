@@ -47,7 +47,7 @@ const Popup = ({ onClose, isOpen }) => {
             }
         }
         try {
-            let { data } = await axios.patch("http://localhost:8001/user/udpdateProfile", { ...formData }, config)
+            let { data } = await axios.patch("https://aquamarine-piranha-gear.cyclic.app/user/udpdateProfile", { ...formData }, config)
             toast({
                 title: data.message,
                 description: "We've updated your account info for you.",

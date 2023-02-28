@@ -1,3 +1,10 @@
+# Note :- Here is the the admin access to this app
+## email- admin@gmail .com
+## password- 12345   
+
+
+## Netlify Link :- "https://frabjous-cat-ee5b19.netlify.app"
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -10,7 +10,7 @@ export const getUserProfile = () => async (dispatch) => {
         }
     }
     try {
-        const { data } = await axios.get(`http://localhost:8001/user/getProfile`,config);
+        const { data } = await axios.get(`https://aquamarine-piranha-gear.cyclic.app/user/getProfile`,config);
         console.log(data);
           return dispatch({
             type: USER_PROFILE_SUCCESS,
